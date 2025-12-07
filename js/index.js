@@ -1,13 +1,10 @@
-// * الإعدادات الأساسية والثوابت (لكلا الصفحتين) *
 
-const lang = document.documentElement.lang; // جلب اللغة الحالية: 'en', 'ar', 'it'
+const lang = document.documentElement.lang;
 const params = new URLSearchParams(window.location.search);
-const id = params.get("id"); // جلب الـ ID لتفاصيل المنتج
+const id = params.get("id");
 
-// 1. تعريف رقم الهاتف
 const phoneNumber = "201103009403";
 
-// 2. نصوص زر 'View Details' (لصفحة المنتجات)
 const buttonTexts = {
     en: "View Details",
     ar: "عرض التفاصيل",
@@ -15,7 +12,6 @@ const buttonTexts = {
 };
 const buttonText = buttonTexts[lang] || buttonTexts.en;
 
-// 3. نصوص وأهداف زر الواتساب (لصفحة التفاصيل)
 const whatsappData = {
     // English
     en: {
@@ -42,16 +38,15 @@ const whatsappData = {
 const currentWhatsapp = whatsappData[lang] || whatsappData.en;
 
 
-// 4. دالة لإنشاء قائمة التباينات (Variants List)
 function createVariantsList(variants, currentLang) {
     if (!variants || variants.length === 0) {
         return '';
     }
 
     let listHtml = `<h4 class="variants-title">${currentWhatsapp.variants_title}</h4><ul class="variants-list">`;
-    
+
     variants.forEach(variant => {
-        const variantName = variant[`name_${currentLang}`] || variant.name_en; 
+        const variantName = variant[`name_${currentLang}`] || variant.name_en;
         listHtml += `<li><i class="fa-solid fa-seedling"></i> ${variantName}</li>`;
     });
 
@@ -59,8 +54,6 @@ function createVariantsList(variants, currentLang) {
     return listHtml;
 }
 
-
-// * معالج تحميل بيانات المنتج (صفحة التفاصيل) *
 
 if (id) {
     fetch("products.json")
@@ -103,8 +96,6 @@ if (id) {
 }
 
 
-// * معالج تحميل المنتجات (صفحة المنتجات) *
-
 else {
     fetch('products.json')
         .then(res => res.json())
@@ -115,7 +106,7 @@ else {
             data.products.forEach(product => {
                 let name = product[`name_${lang}`];
                 let description = product[`description_${lang}`].substring(0, 80) + '...';
-                let productPage = `product-detail.html?id=${product.id}&lang=${lang}`; 
+                let productPage = `product-detail.html?id=${product.id}&lang=${lang}`;
 
                 const card = document.createElement('div');
                 card.classList.add('col-lg-4', 'col-md-6', 'mb-4');
@@ -134,14 +125,11 @@ else {
         .catch(err => console.error("Error fetching products list:", err));
 }
 
-// * وظائف شريط التنقل (Navbar Functions) *
-
 document.addEventListener("DOMContentLoaded", function () {
-    
-    // 1. Navbar Scroll Effect (إضافة كلاس عند التمرير)
+
     window.addEventListener("scroll", function () {
         let navbar = document.querySelector(".navbar");
-        
+
         if (navbar) {
             if (window.scrollY > 2) {
                 navbar.classList.add("navbar-scrolled");
@@ -151,18 +139,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 2. Active Link State (تفعيل الرابط النشط)
-    let currentFilePath = window.location.pathname.split('/').pop() || 'index.html'; 
-    currentFilePath = currentFilePath.split('?')[0]; 
-    
+    let currentFilePath = window.location.pathname.split('/').pop() || 'index.html';
+    currentFilePath = currentFilePath.split('?')[0];
+
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    
+
     navLinks.forEach(link => {
-        // الحصول على اسم الملف من رابط العنصر وتجريده من معلمات URL
         let linkFilePath = link.getAttribute('href').split('/').pop();
-        linkFilePath = linkFilePath.split('?')[0]; 
-        
-        // تفعيل الرابط إذا تطابق اسم الملف
+        linkFilePath = linkFilePath.split('?')[0];
+
         if (linkFilePath === currentFilePath) {
             link.classList.add('active');
         } else {
@@ -170,33 +155,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 3. Fix Language Switch (تصحيح تبديل اللغة في صفحة التفاصيل)
     const currentId = params.get("id");
-    const langDropdown = document.getElementById('language-switcher-dropdown'); 
+    const langDropdown = document.getElementById('language-switcher-dropdown');
 
     if (currentId && langDropdown) {
-        
+
         const isCurrentPageInSubFolder = lang !== 'en';
 
         langDropdown.querySelectorAll('a').forEach(link => {
-            const currentHref = link.getAttribute('href'); 
-            
-            let newLangCode = 'en'; 
+            const currentHref = link.getAttribute('href');
+
+            let newLangCode = 'en';
             if (link.textContent.includes('Arabic') || currentHref.includes('/ar/')) {
                 newLangCode = 'ar';
             } else if (link.textContent.includes('Italian') || currentHref.includes('/it/')) {
                 newLangCode = 'it';
             }
-            
+
             let targetPath = `product-detail.html`;
             if (newLangCode !== 'en') {
                 targetPath = `${newLangCode}/product-detail.html`;
             }
-            
+
             let pathPrefix = isCurrentPageInSubFolder ? '../' : '';
-            
+
             const finalPath = `${pathPrefix}${targetPath}`;
-            
+
             link.href = `${finalPath}?id=${currentId}&lang=${newLangCode}`;
         });
     }
@@ -207,4 +191,16 @@ document.addEventListener("DOMContentLoaded", function () {
             heroText.classList.add("visible");
         }
     }, 700);
+});
+
+// OVERLAY
+
+window.addEventListener('load', function () {
+    const overlay = document.getElementById('loading-overlay');
+    if (overlay) {
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 500);
+    }
 });

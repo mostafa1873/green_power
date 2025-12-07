@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <head>
+        <link rel="icon" type="image/ico" href="../favicon-32x32.ico" sizes="32x32">
+
+        <link rel="icon" type="image/ico" href="../favicon-192x192.ico" sizes="192x192">
+    </head>
+
     <title>Azienda Green Power</title>
     <link rel="stylesheet" href="../css/all.min.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
@@ -12,6 +19,15 @@
 </head>
 
 <body>
+
+    <div id="loading-overlay">
+        <img src="images/logo.webp" alt="Loading Logo" class="loading-logo">
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
@@ -41,13 +57,13 @@
                             aria-expanded="false">Lingua</a>
                         <ul class="dropdown-menu" id="language-switcher-dropdown">
                             <li>
-                                <a class="dropdown-item fw-bold" href="../ar/products.html">Arabo</a>
-                            </li>
-                            <li>
                                 <a class="dropdown-item fw-bold" href="../products.html">Inglese</a>
                             </li>
                             <li>
                                 <a class="dropdown-item fw-bold" href="it/products.html">Italiano</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fw-bold" href="../ar/products.html">Arabo</a>
                             </li>
                         </ul>
                     </li>
@@ -55,7 +71,7 @@
             </div>
         </div>
     </nav>
-    
+
     <section class="padd">
         <div class="hero-text">
             <h1>I Nostri Prodotti</h1>
@@ -73,12 +89,18 @@
             <div class="company-content">
                 <h1>Green Power</h1>
                 <p>
-                    Fai il tuo prossimo ordine: qualità e freschezza garantite dall'Egitto. Contattaci per un preventivo personalizzato!
+                    Fai il tuo prossimo ordine: qualità e freschezza garantite dall'Egitto. Contattaci per un preventivo
+                    personalizzato!
                 </p>
                 <a href="../it/contact.html" class="btn-explore">Ordina ora</a>
             </div>
         </div>
     </section>
+
+    <a href="https://wa.me/201103009403" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Contattaci tramite WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <section class="footer-modern container-fluid">
         <footer class="container">

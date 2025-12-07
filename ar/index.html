@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <head>
+        <link rel="icon" type="image/ico" href="../favicon-32x32.ico" sizes="32x32">
+
+        <link rel="icon" type="image/ico" href="../favicon-192x192.ico" sizes="192x192">
+    </head>
+
     <title>شركة جرين باور</title>
     <link rel="stylesheet" href="../css/all.min.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
@@ -16,6 +23,15 @@
 </head>
 
 <body>
+
+    <div id="loading-overlay">
+        <img src="images/logo.webp" alt="Loading Logo" class="loading-logo">
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
@@ -45,13 +61,13 @@
                             aria-expanded="false">اللغة</a>
                         <ul class="dropdown-menu" id="language-switcher-dropdown">
                             <li>
-                                <a class="dropdown-item fw-bold" href="ar/index.html">العربية</a>
-                            </li>
-                            <li>
                                 <a class="dropdown-item fw-bold" href="../index.html">الإنجليزية</a>
                             </li>
                             <li>
                                 <a class="dropdown-item fw-bold" href="../it/index.html">الإيطالية</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fw-bold" href="../ar/index.html">العربية</a>
                             </li>
                         </ul>
                     </li>
@@ -127,7 +143,8 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="feature-card text-center">
-                        <img src="../images/vegetables.webp" loading="lazy" class="equal-img mb-3" alt="تصدير الخضروات" />
+                        <img src="../images/vegetables.webp" loading="lazy" class="equal-img mb-3"
+                            alt="تصدير الخضروات" />
                         <h3>تصدير الخضروات</h3>
                         <p>
                             تصدير خضروات عالية الجودة لضمان صحتك وسعادتك. نقدم مجموعة واسعة
@@ -160,21 +177,27 @@
         </div>
     </section>
 
+    <a href="https://wa.me/201103009403" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <section class="footer-modern container-fluid">
         <footer class="container">
             <div class="row text-center text-lg-start align-items-start gy-4">
 
                 <div class="col-lg-3 d-flex justify-content-center justify-content-lg-start align-items-center">
-                    <img src="../images/logo.webp" class="footer-logo" alt="شعار شركة جرين باور للتصدير الخضروات والفواكه">
+                    <img src="../images/logo.webp" class="footer-logo"
+                        alt="شعار شركة جرين باور للتصدير الخضروات والفواكه">
                 </div>
 
                 <div class="col-lg-3">
                     <h5>روابط مهمة</h5>
                     <ul class="list-unstyled">
-                        <li><a href="../ar/indexar.html">الرئيسية</a></li>
-                        <li><a href="../ar/aboutar.html">من نحن</a></li>
-                        <li><a href="../ar/productsar.html">المنتجات</a></li>
-                        <li><a href="../ar/contact">اتصل بنا</a></li>
+                        <li><a href="../ar/index.html">الرئيسية</a></li>
+                        <li><a href="../ar/about.html">من نحن</a></li>
+                        <li><a href="../ar/products.html">المنتجات</a></li>
+                        <li><a href="../ar/contact.html">اتصل بنا</a></li>
                     </ul>
                 </div>
 

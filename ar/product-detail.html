@@ -4,14 +4,30 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>شركة Green Power</title>
+
+    <head>
+        <link rel="icon" type="image/ico" href="../favicon-32x32.ico" sizes="32x32">
+
+        <link rel="icon" type="image/ico" href="../favicon-192x192.ico" sizes="192x192">
+    </head>
+
+    <title>شركة جرين باور</title>
     <link rel="stylesheet" href="../css/all.min.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/home.css" /> 
-    <link rel="stylesheet" href="../css/details.css" /> 
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/details.css" />
 </head>
 
 <body>
+
+    <div id="loading-overlay">
+        <img src="images/logo.webp" alt="Loading Logo" class="loading-logo">
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
@@ -41,13 +57,13 @@
                             aria-expanded="false">اللغة</a>
                         <ul class="dropdown-menu" id="language-switcher-dropdown">
                             <li>
-                                <a class="dropdown-item fw-bold" href="../ar/product-detail.html">العربية</a>
-                            </li>
-                            <li>
                                 <a class="dropdown-item fw-bold" href="../product-detail.html">الإنجليزية</a>
                             </li>
                             <li>
                                 <a class="dropdown-item fw-bold" href="../it/product-detail.html">الإيطالية</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fw-bold" href="../ar/product-detail.html">العربية</a>
                             </li>
                         </ul>
                     </li>
@@ -55,7 +71,13 @@
             </div>
         </div>
     </nav>
+
     <div class="product-container" id="productDetails"></div>
+
+    <a href="https://wa.me/201103009403" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <section class="footer-modern container-fluid">
         <footer class="container">

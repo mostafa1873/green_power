@@ -4,7 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Green Power Company</title>
+
+    <head>
+        <link rel="icon" type="image/ico" href="favicon-32x32.ico" sizes="32x32">
+
+        <link rel="icon" type="image/ico" href="favicon-192x192.ico" sizes="192x192">
+    </head>
+
+    <title>Green Power</title>
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/home.css" />
@@ -19,6 +26,18 @@
 </head>
 
 <body>
+
+    <div id="loading-overlay">
+        <img src="images/logo.webp" alt="Loading Logo" class="loading-logo">
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div id="content">
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
@@ -49,13 +68,13 @@
                             aria-expanded="false">Language</a>
                         <ul class="dropdown-menu" id="language-switcher-dropdown">
                             <li>
-                                <a class="dropdown-item fw-bold" href="ar/index.html">Arabic</a>
-                            </li>
-                            <li>
                                 <a class="dropdown-item fw-bold" href="index.html">English</a>
                             </li>
                             <li>
                                 <a class="dropdown-item fw-bold" href="it/index.html">Italian</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fw-bold" href="ar/index.html">Arabic</a>
                             </li>
                         </ul>
                     </li>
@@ -141,7 +160,8 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="feature-card text-center">
-                        <img src="images/vegetables.webp" loading="lazy" class="equal-img mb-3" alt="Export Vegetables" />
+                        <img src="images/vegetables.webp" loading="lazy" class="equal-img mb-3"
+                            alt="Export Vegetables" />
                         <h3>Export of Vegetables</h3>
                         <p>
                             Exporting high-quality vegetables to ensure your health and
@@ -176,6 +196,11 @@
     </section>
     <!--end content section -->
 
+    <a href="https://wa.me/201103009403" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Contact us via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- start footer -->
     <section class="footer-modern container-fluid">
         <footer class="container">
@@ -193,7 +218,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html#fcontact">Contact Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
 
