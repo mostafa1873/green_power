@@ -3,7 +3,6 @@ body {
     padding-top: 100px;
 }
 
-/* Navbar */
 .navbar-custom {
     background: #ffffff;
     padding: 0.8rem 0;
@@ -302,5 +301,13 @@ html[lang="ar"] .footer-social a {
 @media (max-width: 992px) {
     [dir="rtl"] .product-container {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-whatsapp {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
     }
 }

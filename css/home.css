@@ -130,6 +130,96 @@ html[lang="ar"] .hero-text {
 }
 
 
+.about-modern {
+    padding: 5rem 0;
+    margin-bottom: 5rem;
+    color: #fff;
+    background: linear-gradient(to right, #1f7a3f, #3cb878);
+}
+
+.about-modern h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-modern p {
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.about-modern .d-flex.align-items-start {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-modern .d-flex.align-items-start i {
+    font-size: 2rem;
+}
+
+.about-modern .rounded-5 img {
+    border-radius: 1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+}
+
+.about-modern[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+.about-modern[dir="rtl"] .d-flex.align-items-start {
+    justify-content: right;
+    flex-direction: row;
+}
+
+.about-modern[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+}
+
+.about-modern[dir="ltr"] .d-flex.align-items-start {
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+@media (max-width: 992px) {
+    .about-modern .row.align-items-center {
+        flex-direction: column-reverse;
+        text-align: center !important;
+    }
+
+    .about-modern .d-flex.align-items-start {
+        flex-direction: column !important;
+        width: 100% !important;
+        margin-bottom: 1.5rem;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .about-modern .d-flex.align-items-start i {
+        margin-bottom: 0.5rem;
+    }
+
+    .about-modern .d-flex.align-items-start p {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-modern {
+        padding: 3rem 1rem;
+    }
+
+    .about-modern .d-flex.align-items-start i {
+        font-size: 2.2rem;
+    }
+}
+
 /* Services Title */
 #servicee {
     background: #114c2e;
