@@ -72,100 +72,80 @@
         </div>
     </nav>
 
-    <div class="contact-section fresh-style ar-dir">
-        <div class="container">
-            <header class="contact-header">
-                <h1>جرين باور - بوابة الأسواق العالمية</h1>
-                <p class="subtitle">نحن هنا للإجابة على جميع استفساراتكم حول منتجاتنا الطازجة وخدمات التصدير.</p>
-            </header>
+    <section class="fresh-connect">
+        <div class="fresh-head container">
+            <h1>شريكك العالمي للتصدير</h1>
+            <p>شريكك الموثوق لتصدير أجود الفواكه والخضروات الطازجة حول العالم.</p>
+        </div>
 
-            <div class="row contact-content-row">
+        <div class="fresh-grid container">
 
-                <div class="col-lg-5 contact-details-card">
-                    <div class="card-body">
-                        <h2 class="card-title">معلومات الاتصال المباشر</h2>
+            <div class="fresh-form-panel">
+                <h2>تواصل مع فريقنا</h2>
+                <form>
+                    <input type="text" placeholder="الاسم كاملاً" required>
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <input dir="rtl" type="tel" placeholder="الهاتف / واتساب">
 
-                        <div class="info-group">
-                            <i class="fas fa-map-marker-alt icon-green"></i>
-                            <div class="info-text">
-                                <h4>الموقع</h4>
-                                <p>سيدي غازي، كفر الدوار، محافظة البحيرة، مصر</p>
-                            </div>
-                        </div>
+                    <select required>
+                        <option selected disabled>مجال الاهتمام</option>
+                        <option>استفسار عن تصدير الفواكه</option>
+                        <option>استفسار عن تصدير الخضروات</option>
+                        <option>الشحن والخدمات اللوجستية</option>
+                        <option>أخرى</option>
+                    </select>
 
-                        <div class="info-group">
-                            <i class="fas fa-envelope icon-orange"></i>
-                            <div class="info-text">
-                                <h4>البريد الإلكتروني</h4>
-                                <p>contact@greenpower-eg.com</p>
-                            </div>
-                        </div>
+                    <textarea rows="4" placeholder="رسالتك"></textarea>
 
-                        <div class="info-group">
-                            <i class="fas fa-phone-alt icon-green"></i>
-                            <div class="info-text">
-                                <h4>الهاتف/الواتساب</h4>
-                                <p dir="ltr">+20 110 300 9403</p>
-                            </div>
-                        </div>
+                    <button type="submit">إرسال الرسالة</button>
+                </form>
+            </div>
 
-                        <div class="social-links-footer">
-                            <a href="https://www.facebook.com/profile.php?id=61576598957713" aria-label="فيسبوك"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/greenpower02025" aria-label="انستجرام"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://wa.me/201103009403" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
-                            <a href="https://www.linkedin.com/company/green-power-eg/" aria-label="لينكد إن"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
+            <div class="fresh-info-panel">
+                <h2>بيانات التواصل</h2>
+
+                <div class="fresh-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>العنوان:</strong>
+                        <p>سيدي غازي – كفر الدوار – البحيرة – مصر</p>
                     </div>
                 </div>
 
-                <div class="col-lg-7 contact-form-section">
-                    <h2>أرسل لنا رسالة</h2>
-                    <form id="freshContactForm">
-                        <div class="mb-3">
-                            <label for="fullName" class="form-label">الاسم بالكامل:</label>
-                            <input type="text" class="form-control" id="fullName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="companyEmail" class="form-label">البريد الإلكتروني للشركة:</label>
-                            <input type="email" class="form-control" id="companyEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="mobilePhone" class="form-label">رقم الهاتف المحمول:</label>
-                            <input dir="rtl" type="tel" class="form-control" id="mobilePhone" pattern="[0-9]{10,15}"
-                                title="يرجى إدخال رقم هاتف صالح (10-15 رقم)" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="interest" class="form-label">مجال الاهتمام (اختر):</label>
-                            <select class="form-select" id="interest" required>
-                                <option value="">-- اختر مجالاً --</option>
-                                <option value="fruits">استفسار عن أسعار الفواكه</option>
-                                <option value="vegetables">استفسار عن أسعار الخضروات</option>
-                                <option value="export">شراكة / خدمات التصدير</option>
-                                <option value="other">أخرى</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="fullMessage" class="form-label">الرسالة:</label>
-                            <textarea class="form-control" id="fullMessage" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-fresh-primary">إرسال الرسالة <i
-                                class="fas fa-paper-plane"></i></button>
-                    </form>
+                <div class="fresh-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>البريد الإلكتروني:</strong>
+                        <p>contact@greenpower-eg.com</p>
+                    </div>
+                </div>
+
+                <div class="fresh-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <strong>الهاتف:</strong>
+                        <p dir="ltr">+20 110 300 9403</p>
+                    </div>
+                </div>
+
+                <div class="fresh-social-links">
+                    <h3>تابع مسيرتنا</h3>
+                    <a href="https://www.facebook.com/profile.php?id=61576598957713"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/greenpower02025"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/201103009403"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/company/green-power-eg/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-        </div>
 
-        <div class="map-container-section mt-5">
-            <h2 class="text-center" style="color: #38761D;">موقعنا على الخريطة</h2>
-            <p class="text-center text-muted">سيدي غازي، كفر الدوار، محافظة البحيرة، مصر</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3417.5182515974234!2d30.083605475432332!3d31.067508174424507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5e1845dc29f5d%3A0xa907c4971acc4edc!2z2KfZhNiv2YjYp9ix!5e0!3m2!1sen!2seg!4v1765101499820!5m2!1sen!2seg"
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="fresh-map-panel">
+                <iframe class="rounded-3"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3417.5182515974234!2d30.0836!3d31.0675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5e1845dc29f5d%3A0xa907c4971acc4edc!2z2KfZhNiv2YjYp9ix!5e0!3m2!1sen!2seg!4v1765101499820"
+                    width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen></iframe>
+            </div>
+
         </div>
-    </div>
+    </section>
 
     <a href="https://wa.me/201103009403" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
         aria-label="تواصل معنا عبر واتساب">
@@ -198,7 +178,7 @@
                     </p>
                     <p>
                         <i class="fa-solid fa-phone ms-2 text-success"></i>
-                        <a target="_blank" href="tel:+201103009403">+201103009403</a>
+                        <a target="_blank" dir="ltr" href="tel:+201103009403">+201103009403</a>
                     </p>
                     <p>
                         <i class="fa-solid fa-envelope ms-2 text-danger"></i>
